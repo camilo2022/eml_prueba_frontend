@@ -82,4 +82,14 @@ export class CreateComponent {
       text: text,
     })
   }
+
+  onlyNumbers(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const inputValue = inputElement.value;
+
+    // Usar expresión regular para permitir solo números
+    if (!/^\d*$/.test(inputValue)) {
+      inputElement.value = inputValue.replace(/[^\d]/g, '');
+    }
+  }
 }

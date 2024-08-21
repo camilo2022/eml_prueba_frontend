@@ -32,7 +32,7 @@ export class EditComponent implements OnInit {
   }
 
   // edicion de usuario
-  edit(id: number){  
+  edit(id: number){
     // llamamos al servicio para obtneer los datos
     this.userService.edit(id).subscribe(
       (success: any) => {
@@ -120,5 +120,15 @@ export class EditComponent implements OnInit {
       title: title,
       text: text,
     })
+  }
+
+  onlyNumbers(event: Event): void {
+    const inputElement = event.target as HTMLInputElement;
+    const inputValue = inputElement.value;
+
+    // Usar expresión regular para permitir solo números
+    if (!/^\d*$/.test(inputValue)) {
+      inputElement.value = inputValue.replace(/[^\d]/g, '');
+    }
   }
 }

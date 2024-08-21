@@ -16,7 +16,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [
     RouterModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,

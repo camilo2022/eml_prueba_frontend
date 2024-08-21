@@ -12,6 +12,8 @@
               [(ngModel)]="user.names"
               name="name"
               required
+              maxlength="50"
+              minlength="5"
               placeholder="Digite nombre del Usuario"
               #name="ngModel">
             </mat-form-field>
@@ -32,6 +34,8 @@
               [(ngModel)]="user.last_names"
               name="last_name"
               required
+              maxlength="50"
+              minlength="5"
               placeholder="Digite apellidos del Usuario"
               #last_name="ngModel">
             </mat-form-field>
@@ -48,7 +52,7 @@
               <mat-label>Numero de Telefono</mat-label>
               <input
               matInput
-              type="text"
+              type="text" (input)="onlyNumbers($event)"
               id="number_phone"
               [(ngModel)]="user.number_phone"
               name="number_phone"
@@ -57,7 +61,7 @@
               maxlength="10"
               minlength="10"
               placeholder="Digite numero de telefono del Usuario"
-              #number_phone="ngModel">
+              #number_phone="ngModel" appOnlyNumbers >
             </mat-form-field>
             <div class="alert alert-danger" *ngIf="number_phone.invalid && (number_phone.dirty || number_phone.touched)">
               <div *ngIf="number_phone.errors?.['required']">
@@ -81,6 +85,8 @@
               required
               pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"
               placeholder="Digite correo del Usuario"
+              maxlength="80"
+              minlength="5"
               #email="ngModel">
             </mat-form-field>
             <div class="alert alert-danger" *ngIf="email.invalid && (email.dirty || email.touched)">
@@ -93,7 +99,7 @@
             </div>
           </div>
         </div>
-  
+
         <button type="button" class="btn btn-secondary m-1" (click)="index()">Devolver</button>
         <button type="submit" class="btn btn-success m-1" [disabled]="!usersForm.form['valid']">Guardar</button>
       </div>

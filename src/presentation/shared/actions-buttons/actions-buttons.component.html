@@ -1,0 +1,11 @@
+<div id="containerButtons">
+  <button *ngIf="editButton" class="buttonEdit" type="button" (click)="emitEdit()">
+    <mat-icon class="text-primary">edit</mat-icon>
+    <span>Editar</span>
+  </button>
+
+  <button *ngIf="removeButton" class="buttonRemove" type="button" (click)="emitRemove()">
+    <mat-icon class="text-primary">delete</mat-icon>
+    <span>Eliminar</span>
+  </button>
+</div>

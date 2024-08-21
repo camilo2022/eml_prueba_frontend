@@ -1,0 +1,46 @@
+#card {
+  background-color: #e5f1ff;
+  width: 219px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  border-radius: 8px;
+  border: 1px solid #E5F1FF;
+
+  .iconContainer {
+    position: relative;
+
+    .circle {
+      position: absolute;
+      top: -2px;
+      left: -10px;
+      width: 33.65px;
+      height: 33.65px;
+      border-radius: 50%;
+      opacity: 0.2;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding-left: 5px;
+
+    .count {
+      color: #0d6efd;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 24.2px;
+      text-align: left;
+    }
+
+    .label {
+        font-size: 14px;
+        font-weight: 300;
+        transform: translateY(5px);
+    }
+  }
+}

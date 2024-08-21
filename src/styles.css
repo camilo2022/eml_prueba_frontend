@@ -1,0 +1,589 @@
+/* You can add global styles to this file, and also import other style files */
+
+:root{
+    --primary: var(#007bff) 
+    --primary-2: var(#007bff) 
+}
+
+/*
+*   Utilities
+*/
+
+.text-primary{
+    color: var(--primary);
+}
+
+/*
+* Other Styles
+*/
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+}
+.button-principal{
+    background-color: #fff;
+    border-color: #007bff;
+    color: #007bff;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.button {
+    padding: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 50px;
+    color: #072F43;
+    height: 50px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.download-button{
+    background-color: #E5F1FF;
+    color: #0D6EFD;
+    padding: 16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 50px;
+    height: 50px;
+    border: none;
+}
+
+.cancel-button {
+    background-color: #E5F1FF; color: #0D6EFD; padding: 4px 16px; border: none; border-radius: 25px;
+}
+
+.submit-button {
+    color: #E5F1FF; background-color: #0D6EFD; padding: 4px 16px; border: none; border-radius: 25px;
+}
+
+.button-descargar{
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50px;
+
+}
+.btn-cancelar{
+    background-color: #E5F1FF;
+    color: #007bff;
+    border-radius: 50px;
+
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.search-label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 5px 10px;
+    border-radius: 25px 0 0 25px;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 0 25px 25px 0;
+}
+
+.search-icon {
+    fill: #007BFF; /* Color azul similar al del icono en la imagen */
+    width: 20px;
+    height: 20px;
+}
+
+.search-input::placeholder {
+    color: #ccc;
+}
+
+/* MODALES */
+
+.modal-content {
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-title {
+    margin: 0;
+    font-size: 18px;
+}
+
+.btn-close {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+.content-label-input{
+    text-align: left;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 28px;
+}
+
+.permissions-container {
+    max-height: 150px;
+    overflow-y: auto;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.permissions-container .form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+/* Estilo del contenedor del scrollbar */
+.permissions-container::-webkit-scrollbar {
+    width: 6px; /* Cambia este valor para hacer el scrollbar más delgado o más grueso */
+}
+
+/* Estilo del "dedo" del scrollbar */
+.permissions-container::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cambia el color del scrollbar aquí */
+    border-radius: 3px; /* Cambia el radio para redondear las esquinas del scrollbar */
+}
+
+/* Estilo del "dedo" del scrollbar cuando está siendo activado */
+.permissions-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cambia el color del scrollbar cuando el usuario lo está utilizando */
+}
+
+/* Estilo de la pista del scrollbar */
+.permissions-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Cambia el color de la pista del scrollbar */
+    border-radius: 3px; /* Cambia el radio para redondear las esquinas de la pista del scrollbar */
+}
+
+
+.permissions-container .form-check-label {
+    margin-left: 0.5rem;
+}
+.form-check {
+ padding-left: 0px;
+}
+.form-switch {
+     padding-left: 0px;
+}
+
+.form-check-input {
+    margin-left: 0;
+}
+
+.form-switch .form-check-input {
+    width: 2rem;
+    height: 1rem;
+    margin-left: 0;
+    background-position: right center;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-switch .form-check-input:checked {
+    background-color: #007bff;
+    background-position: left center;
+}
+
+.form-switch .form-check-label {
+    margin-left: 0.75rem;
+}
+
+.modal-footer {
+    padding: 1rem 1.5rem;
+    border-top: 1px solid #e5e5e5;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #555;
+    border-color: #f0f0f0;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    color: white;
+}
+/* PAGINACION*/
+
+::ng-deep .pagination{
+    --bs-pagination-border-width: white !important; /* Cambia el ancho del borde */
+    --bs-pagination-border-color: white !important; /* Cambia el color del borde */
+    --bs-pagination-disabled-bg: none;
+    --bs-pagination-focus-box-shadow: none;
+    --bs-pagination-disabled-border-color: none;
+    --bs-pagination-disabled-color: none;
+    --bs-pagination-focus-bg: none;
+    --bs-pagination-hover-border-color: none;
+  }
+
+  ::ng-deep .pagination .page-link{
+    --bs-pagination-border-radius: 50%;
+    transition: none;
+  }
+  ::ng-deep .pagination .active > .page-link{
+    border-radius: 50%;
+    transition: none;
+  }
+  .activo {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+.inactivo {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: red;
+    color: white;
+    border-radius: 15px;
+    font-size: 14px;
+}
+.no-border-bottom {
+    border-bottom: white !important;
+}
+
+/* ESTILOS TABLAS */
+  .head-table{
+    border-bottom: 1px black;
+  }
+  .table {
+    width: 100%;
+    table-layout: fixed; /* Ensures fixed width columns */
+    /* white-space: nowrap; Prevents text wrapping */
+    overflow-x: auto; /* Enables horizontal scroll */
+}
+
+thead {
+    border-bottom: 1px solid black;
+    th {
+        text-align: center;
+    }
+}
+
+tbody td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px; /* Adds padding to cells for better spacing */
+}
+
+tbody ul {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+    text-align: left;
+}
+
+tbody .activo {
+    font-weight: bold;
+}
+
+tbody .inactivo {
+
+    font-weight: bold;
+}
+
+tbody .no-border-bottom td {
+    border-bottom: none;
+}
+@media (max-width: 1100px) {
+    .table th, .table td {
+      font-size: 0.9em;
+      padding: 4px;
+      min-width: 120px;
+    }
+    .table-container {
+        overflow-x: auto;
+        width: 100%;
+      }
+      .table{
+        width: 100%;
+      }
+      .input-tablas{
+        width: 110px;
+      }
+  }
+  @media (max-width: 1000px) {
+    .table th, .table td {
+      font-size: 0.9em;
+      padding: 4px;
+      min-width: 120px;
+    }
+    .table-container {
+        overflow-x: auto;
+      }
+      .table{
+        width: 800px;
+      }
+      .input-tablas{
+        width: 110px !important;
+      }
+  }
+  .table-container {
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  /* Estilos para el scrollbar */
+  .table-container::-webkit-scrollbar {
+    height: 10px; /* Altura del scrollbar */
+  }
+  
+  .table-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista del scrollbar */
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background: #0D6EFD; /* Color de fondo del scrollbar */
+  }
+  
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background: #0b5ed7; /* Color de fondo del scrollbar al pasar el mouse */
+  }
+    
+/* ESTILOS DE LOS TOAST */
+#toast-container {
+    position: fixed;
+    top: 13%;
+    right: 10px;
+    width: auto;
+    z-index: 9999;
+}
+
+/* Estilo del contenedor del de los modales alert */
+.cancel-button-class {
+    color: #007bff;
+    border-radius: 100px;
+    background-color: #f0f0f0;
+    border: none;
+    height: 38px;
+    padding: 0 20px;
+    outline: none;
+  }
+  .confirm-button-class {
+    color: #fff;
+    border-radius: 100px;
+    background-color: #007bff;
+    border: none;
+    height: 38px;
+    margin-right: 2px;
+    outline: none; /* Elimina el borde al enfocar */
+    padding: 0 20px; /* Ajusta el espacio entre el borde y el texto */
+  }
+
+  .confirm-button-class:hover {
+    background-color: #0056b3; /* Color de fondo cuando el cursor está sobre el botón */
+  }
+
+  .confirm-button-class:focus,
+  .confirm-button-class:active {
+    outline: none; /* Elimina el borde al hacer clic */
+  }
+  .container{
+    --bs-gutter-x: 1.0rem;
+  }
+
+  /* ESTILOS OVERHEAD */
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:14px 0px;
+    gap: 22px 10px;
+    width: 100%;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    border-bottom: 1px solid #00000033;
+    padding: auto;
+}
+
+.custom-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 10px;
+    isolation: isolate;
+    width: 219px;
+    height: 83px;
+    background: #F6FAFF;
+    border: 1px solid #E5F1FF;
+    border-radius: 8px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    font-family: Arial, sans-serif;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.icon {
+    color: #ff6347;
+    font-size: 24px;
+}
+
+.number {
+    font-size: 20px;
+    color: #0D6EFD;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+    gap: 4px;
+    width: 119px;
+    height: 63px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.text {
+    font-size: 14px;
+    color: #666666;
+}
+
+       @media (max-width: 1215px) {
+            .main-container {
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                justify-content: center;
+            }
+        }
+
+.edit-icon {
+    color: #072F43B2;
+    font-size: 16px;
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    left: 186px;
+    top: 4px;
+    z-index: 1;
+}
+
+.title-gastos {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    color: #072F43;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20.8px;
+    text-align: left;
+
+}
+.title{
+    font-size: 32px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.totales{
+    background-color: #f1f8ff
+}
+.container-overhead{
+    border-bottom: 1px solid #00000033
+}
+.btn-edit{
+    border:none;
+    text-decoration: none;
+    background-color: transparent;
+}
+.input-tablas{
+box-sizing: border-box;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 8px 15px;
+gap: 10px;
+width: 150px;
+height: 38px;
+background: #FFFFFF;
+border: 1px solid #CED4DA;
+border-radius: 28px;
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+.btn-custom{
+    color: #007bff;
+    border-radius: 100px;
+}
+
+
+
+
+div.lineSeparator {
+    width: 100%;
+    height: 1px;
+    background-color: #000000;
+}
+.btn-clicked {
+    background-color: grey !important;
+  }

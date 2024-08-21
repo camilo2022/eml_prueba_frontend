@@ -1,0 +1,68 @@
+.breadcrumb-container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el contenido al inicio */
+    margin-top: 20px;
+  }
+  
+  ngx-simple-breadcrumb {
+    display: inline-flex; /* Cambiado a inline-flex */
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #6e6f70;
+    height: 36px;
+    border-radius: 100px;
+    background-color: #FAFAFA;
+    padding: 0 15px; /* Ajusta el padding según sea necesario */
+  }
+  
+  ngx-simple-breadcrumb a {
+    text-decoration: none;
+    color: #007bff;
+    margin: 0 10px; /* Ajusta los márgenes de los enlaces */
+    transition: color 0.3s ease;
+  }
+  
+  ngx-simple-breadcrumb {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      margin-left: 100px;
+      color: #6e6f70;
+      height: 36px;
+      width: auto;
+      border-radius: 100px;
+      background-color: #FAFAFA;
+    }
+    
+    ngx-simple-breadcrumb a {
+      text-decoration: none;
+      color: #007bff;
+      margin-left: 10px;
+      margin-right: 10px;
+      transition: color 0.3s ease;
+    }
+    
+    ngx-simple-breadcrumb a:hover {
+      color: #0056b3;
+    }
+    
+    ngx-simple-breadcrumb ng-template::after {
+      content: '>';
+      margin: 0 8px;
+      color: #6c757d;
+    }
+    
+    ngx-simple-breadcrumb a:last-child {
+      color: #6c757d;
+      pointer-events: none;
+      cursor: default;
+    }
+    
+    ngx-simple-breadcrumb a:last-child:hover {
+      color: #6c757d;
+    }
+    
+  

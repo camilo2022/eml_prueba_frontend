@@ -1,0 +1,25 @@
+#containerButtons {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    .buttonEdit, .buttonRemove {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-radius: 3px;
+        padding-top: 5px;
+    
+        &:hover {
+            background-color: #072F4333;
+        }
+    
+        span {
+            color: #072F43B2;
+        }
+    }
+}

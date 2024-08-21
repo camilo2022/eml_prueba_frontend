@@ -1,0 +1,14 @@
+<button
+  [type]="type"
+  [disabled]="disabled"
+  (click)="onClick($event)"
+  class="primary-button {{ className }}"
+>
+  <span>{{ text }}</span>
+
+  @if (icon) {
+  	<span class="icon">
+		<mat-icon [class]="iconClass" aria-hidden="false">{{icon}}</mat-icon>
+	</span>
+  }
+</button>

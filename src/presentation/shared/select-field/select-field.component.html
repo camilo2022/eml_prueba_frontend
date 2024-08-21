@@ -1,0 +1,7 @@
+<select name="select" id="select">
+    <option value="1">0, 00</option>
+
+    @if (options) { @for (option of options; track $index) {
+    <option [value]="option.value">{{ option.label }}</option>
+    } }
+</select>

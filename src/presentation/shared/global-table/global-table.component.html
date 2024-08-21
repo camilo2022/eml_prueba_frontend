@@ -1,0 +1,36 @@
+@if(showSearch){
+	<div class="searchContainer">
+		<strong>Buscar en la tabla</strong>
+		<label class="label">
+			<input class="searchInput" type="text" placeholder="Buscar" />
+			<mat-icon matSuffix style="color: #0d6efd">search</mat-icon>
+		</label>
+	</div>
+}
+
+<div id="container">
+	<table id="globalTable" [style]="{minWidth}">
+		<thead>
+			<tr>
+				<th *ngFor="let header of titles; trackBy: trackByIndex">{{ header }}</th>
+			</tr>
+			<tr *ngIf="subtitle">
+				<th class="subtitle"
+					colspan="100%">
+					{{ subtitle }}
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let item of body; trackBy: trackByIndex">
+				<td *ngFor="let header of titlesLowerCase; trackBy: trackByIndex">
+					<ng-container *ngIf="isFunctionObject(item[header]); else staticContent">
+						<ng-container [ngComponentOutlet]="item[header].component"
+							[ngComponentOutletInputs]="item[header].props"></ng-container>
+					</ng-container>
+					<ng-template #staticContent>{{ item[header] }}</ng-template>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

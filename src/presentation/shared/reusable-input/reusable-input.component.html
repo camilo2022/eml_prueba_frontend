@@ -1,0 +1,102 @@
+@if (!onlyView) {
+  @if (type === 'number') {
+    <div id="inputNumberContainer">
+      <input
+        class="inputField"
+        [type]="type"
+        [name]="name"
+        [id]="name"
+        [value]="value"
+        [placeholder]="placeholder"
+        (input)="changeValue($event)"
+      />
+
+      <div class="arrowContainer">
+        <button (click)="changeValue(1)" type="button" class="arrow">
+          <svg
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.79817 4.86377L0.586272 4.86377C0.0873537 4.86377 -0.162106 4.26114 0.191061 3.90797L3.79561 0.300625C4.01424 0.081998 4.37021 0.081998 4.58883 0.300625L8.19338 3.90798C8.54655 4.26114 8.29709 4.86377 7.79817 4.86377Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+        <button (click)="changeValue(-1)" type="button" class="arrow">
+          <svg
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.586596 0.13623H7.79849C8.29741 0.13623 8.54687 0.738857 8.1937 1.09202L4.58916 4.69937C4.37053 4.918 4.01456 4.918 3.79593 4.69937L0.191386 1.09202C-0.161782 0.738857 0.0876777 0.13623 0.586596 0.13623Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  } @else if (type === 'porcentage') {
+    <div id="inputNumberContainer">
+      <input
+        class="inputField"
+        type="text"
+        [name]="name"
+        [id]="name"
+        [value]="value"
+        [placeholder]="placeholder"
+        (input)="changeValuePorcentage($event)"
+      />
+      <div class="arrowContainer">
+        <button (click)="changeValuePorcentage(1)" type="button" class="arrow">
+          <svg
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.79817 4.86377L0.586272 4.86377C0.0873537 4.86377 -0.162106 4.26114 0.191061 3.90797L3.79561 0.300625C4.01424 0.081998 4.37021 0.081998 4.58883 0.300625L8.19338 3.90798C8.54655 4.26114 8.29709 4.86377 7.79817 4.86377Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+        <button (click)="changeValuePorcentage(-1)" type="button" class="arrow">
+          <svg
+            width="9"
+            height="5"
+            viewBox="0 0 9 5"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0.586596 0.13623H7.79849C8.29741 0.13623 8.54687 0.738857 8.1937 1.09202L4.58916 4.69937C4.37053 4.918 4.01456 4.918 3.79593 4.69937L0.191386 1.09202C-0.161782 0.738857 0.0876777 0.13623 0.586596 0.13623Z"
+              fill="black"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  } @else {
+    <input
+      class="inputField"
+      [type]="type"
+      [name]="name"
+      [id]="name"
+      [value]="value"
+      [placeholder]="placeholder"
+      [maxLength]="maxLength"
+    />
+  }
+} @else {
+  <span>$ {{ formatWithThousandSeparator(value) }}</span>
+
+
+}
